@@ -112,7 +112,15 @@
   color: var(--text-muted);
 }
 
-.logout-button {
+.property-header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.primary-button,
+.logout-button,
+.secondary-button,
+.danger-button {
   padding: 8px 16px;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -121,9 +129,98 @@
   font-size: 14px;
 }
 
-.logout-button:hover {
+.primary-button {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.primary-button:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.logout-button:hover,
+.secondary-button:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.danger-button {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.danger-button:hover {
+  background: var(--error);
+  color: #ffffff;
+}
+
+.loading-text,
+.empty-text {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* 物件の新規登録・編集フォーム */
+.property-form {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+}
+
+.property-form h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.property-form label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+}
+
+.property-form input {
+  font: inherit;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+}
+
+.property-form input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.property-form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.property-form-actions button[type='submit'] {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.property-form-actions button[type='submit']:hover {
+  background: var(--accent-hover);
+}
+
+.property-form-actions button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 .property-grid {
@@ -145,10 +242,17 @@
 }
 
 .property-rent,
-.property-area {
+.property-area,
+.property-layout {
   margin: 4px 0;
   font-size: 14px;
   color: var(--text-muted);
+}
+
+.property-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
 }
 
 .loading {
