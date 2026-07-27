@@ -1,0 +1,160 @@
+/* ログイン・会員登録画面 */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 360px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form h1 {
+  margin: 0 0 24px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.auth-form label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+}
+
+.auth-form input {
+  font: inherit;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+}
+
+.auth-form input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.auth-form button[type='submit'] {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.auth-form button[type='submit']:hover {
+  background: var(--accent-hover);
+}
+
+.auth-form button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.auth-switch a {
+  color: var(--accent);
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.info-message {
+  color: var(--info);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* 物件一覧画面 */
+.property-page {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.property-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.property-header h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+}
+
+.user-email {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.logout-button {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.logout-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.property-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.property-card h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.property-rent,
+.property-area {
+  margin: 4px 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--text-muted);
+}
